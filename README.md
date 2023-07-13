@@ -33,12 +33,12 @@ rule-providers:
     url: YOUR_URL # 从这个 URL 获取规则列表
     path: ./ruleset/reject.yaml # 本地存储规则列表的文件路径
     interval: 86400 # 每 86400 秒（即一天）更新一次规则列表
-
+```
 
 3. 如何添加多个订阅: 在 Clash 的配置文件中，你可以添加多个 Proxy Providers 和 Rule Providers。只需要在配置文件中添加多个 Proxy Providers 和 Rule Providers 的定义即可。例如：
 
  
- 
+``` 
   proxy-providers:
     ProxyProvider1: # 代理提供者的名称为 "ProxyProvider1"
       type: http # 代理提供者的类型是 http，意味着 Clash 将从一个 http URL 获取代理服务器列表
@@ -59,7 +59,7 @@ rule-providers:
       type: http # 同样，规则提供者的类型是 http
       url: http://example.com/rules2.txt # 从这个 URL 获取规则列表
       interval: 1200 # 每 1200 秒更新一次规则列表
-
+```
 
 
 以上就是 Clash 中 Proxy Providers 和 Rule Providers 的介绍和使用方法。请注意，你需要将上述的 URL 替换为你的实际的 URL。
